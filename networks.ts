@@ -99,4 +99,11 @@ export const NETWORKS: NetworksObject = {
     endpoint: (contractAddress: string) =>
       `https://api-testnet.ftmscan.com/api?module=contract&action=getsourcecode&address=${contractAddress}&apikey=${process.env.APIKEY_FTMSCAN}`,
   },
+    Zksync: {
+    label: "Zksync Era ",
+    url: "https://explorer.zksync.io",
+    apiKey: process.env.APIKEY_ZKSYNC as string,
+    endpoint: (contractAddress: string) =>
+      `https://explorer.zksync.io/api?module=contract&action=getsourcecode&address=${contractAddress}&apikey=${process.env.APIKEY_ZKSYNC}`,
+  },
 };
